@@ -16,7 +16,7 @@ const AboutMeText = () => {
       </p>
       <button className="border border-orange rounded-full py-2 px-4 text-lg flex gap-2 items-center mt-10 hover:bg-orange transition-all duration-500 cursor-pointer md:self-start sm:self-center">
         <a
-          href="src\assets\resume.pdf"  // Make sure this file is in the public folder
+          href="/RAUSHAN SHRIVASTWA_newww.pdf"  // Make sure this file is in the public folder
           download
         >
           Download CV
