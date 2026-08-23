@@ -1,14 +1,15 @@
 const SkillsText = () => {
   return (
-    <div className="flex flex-col items-center mt-[100px]">
-      <h2 className="text-6xl text-cyan mb-10">My Skills</h2>
-      <p className="text-lg text-center">
-        I not only work with these technologies but excellent in using them with
-        best practices to deliver high-quality results, I have been working with
-        all these skills to build my portfolio projects
+    <div className="flex flex-col items-center mt-12 mb-6 text-center">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+        Technical <span className="text-cyan">Tech Stack</span> & Skills
+      </h2>
+      <p className="text-base md:text-lg text-grey mt-3 max-w-[700px] leading-relaxed">
+        Extensive hands-on experience building distributed systems, containerized microservices, production ML platforms, and high-concurrency backends.
       </p>
     </div>
   );
 };
 
 export default SkillsText;
+

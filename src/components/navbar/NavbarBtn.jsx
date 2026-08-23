@@ -1,16 +1,19 @@
 import { Link } from "react-scroll";
-import { LuArrowDownRight } from "react-icons/lu";
+import { FaPaperPlane } from "react-icons/fa";
 
 const NavbarBtn = () => {
   return (
-    <button className=" px-4 py-2 rounded-full text-xl font-bold font-body text-white border-cyan border flex items-center gap-1 bg-gradient-to-r  from-darkCyan to-orange transition-all duration-500 hover:scale-110 hover:border-orange cursor-pointer hover:shadow-cyanShadow">
-      <Link spy={true} smooth={true} duration={500} offset={-120} to="contact">
-        Contact Me
-      </Link>
-      <div className="sm:hidden md:block">
-        <LuArrowDownRight />
-      </div>
-    </button>
+    <Link
+      spy={true}
+      smooth={true}
+      duration={500}
+      offset={-100}
+      to="contact"
+      className="px-4 py-2 rounded-full text-xs font-bold text-black bg-gradient-to-r from-cyan to-lightCyan hover:shadow-[0_0_20px_rgba(0,242,254,0.5)] transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer flex items-center gap-1.5"
+    >
+      <span>Contact</span>
+      <FaPaperPlane className="text-[10px]" />
+    </Link>
   );
 };
 

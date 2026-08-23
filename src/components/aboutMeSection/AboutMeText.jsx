@@ -1,30 +1,34 @@
-import { Link } from "react-scroll";
+
+import { FaDownload } from "react-icons/fa";
 
 const AboutMeText = () => {
   return (
-    <div className="flex flex-col md:items-start sm:items-center md:text-left sm:text-center">
-      <h2 className="text-6xl text-cyan mb-10">About Me</h2>
-      <p>
-        I am <b>Raushan Shrivastwa</b>, a passionate and detail-oriented Computer Science undergraduate at Vellore Institute of Technology, 
-        with a strong foundation in full-stack web development, data structures, and emerging technologies like AI and IoT. 
-        I have successfully completed multiple internships and hackathons, gaining real-world experience in building 
-        scalable and user-centric solutions. 
-        Proficient in technologies such as HTML, CSS, JavaScript, React.js, Node.js, MongoDB, and Python, 
-        I constantly seek opportunities to solve real-world problems through innovative tech. 
-        My goal is to contribute to impactful projects while continuously upskilling in areas like 
-        cloud computing, data analysis, and system design.
-      </p>
-      <button className="border border-orange rounded-full py-2 px-4 text-lg flex gap-2 items-center mt-10 hover:bg-orange transition-all duration-500 cursor-pointer md:self-start sm:self-center">
-        <a
-          href="/RAUSHAN SHRIVASTWA_newww.pdf"  // Make sure this file is in the public folder
-          download
-        >
-          Download CV
-        </a>
+    <div className="flex flex-col md:items-start items-center md:text-left text-center max-w-[650px]">
+      <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight">
+        About <span className="text-cyan">Me</span>
+      </h2>
+      <div className="glass-panel border border-white/10 bg-brown/20 backdrop-blur-xl p-6 md:p-8 rounded-3xl text-grey text-base md:text-lg leading-relaxed shadow-xl space-y-4">
+        <p>
+          I am <strong className="text-white font-bold">Raushan Shrivastwa</strong>, a Computer Science undergrad at <span className="text-cyan font-semibold">Vellore Institute of Technology – AP (9.09 CGPA)</span> with hands-on experience building distributed systems, containerized microservices, and production-deployed ML platforms.
+        </p>
+        <p>
+          Proficient in <strong className="text-white font-semibold">Java, Python, C++, and JavaScript</strong>, with a strong foundation in Data Structures, Algorithms, and Systems Design. I specialize in asynchronous & concurrent request handling in backend services (Node.js, Express, Redis, FastAPI, Docker Compose, Jenkins CI/CD) and full-stack AI engineering.
+        </p>
+      </div>
 
-      </button>
+      <a
+        href="/resume.pdf"
+        download="Raushan_Shrivastwa_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-8 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-orange to-lightOrange text-black font-bold text-sm flex items-center gap-2 hover:shadow-[0_0_25px_rgba(255,90,54,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+      >
+        <FaDownload className="text-sm" /> Download Resume
+      </a>
     </div>
   );
 };
 
 export default AboutMeText;
+
+

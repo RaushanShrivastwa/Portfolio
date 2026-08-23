@@ -21,7 +21,7 @@ const FooterMain = () => {
   ];
   return (
     <div className="px-4">
-      <div className="w-full h-[1px] bg-lightGrey mt-24"></div>
+      <div className="w-full h-[1px] bg-white/10 mt-24"></div>
       <div className="md:flex justify-between mt-4 max-w-[1200px] mx-auto sm:hidden">
         <p className="text-3xl text-lightGrey ">Raushan Shrivastwa</p>
         <ul className="flex gap-4 text-lightGrey text-xl">
@@ -43,8 +43,8 @@ const FooterMain = () => {
           })}
         </ul>
       </div>
-      <p className="max-w-[1200px] mx-auto text-right mt-2 mb-12 text-sm text-lightBrown">
-        © 2025 Raushan | All Rights Reserved.
+      <p className="max-w-[1200px] mx-auto text-right mt-2 mb-12 text-sm text-grey/60">
+        © 2026 Raushan | All Rights Reserved.
       </p>
     </div>
   );

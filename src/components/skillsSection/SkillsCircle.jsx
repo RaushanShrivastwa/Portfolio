@@ -1,5 +1,4 @@
-import React from "react";
-import { FcSettings } from "react-icons/fc";
+
 
 const SkillsCircle = () => {
   return (

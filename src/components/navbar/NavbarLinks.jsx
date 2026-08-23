@@ -1,31 +1,31 @@
 import { Link } from "react-scroll";
 
 const links = [
-  { link: "About Me", section: "about" },
+  { link: "About", section: "about" },
   { link: "Skills", section: "skills" },
   { link: "Projects", section: "projects" },
-  { link: "Certifications", section: "certifications"},
+  { link: "Certifications", section: "certifications" },
   { link: "Education", section: "education" },
- 
 ];
 
 const NavbarLinks = () => {
   return (
-    <ul className="flex lg:flex-row sm:flex-col gap-6 text-white font-body lg:relative sm:absolute sm:top-[120%] text-center left-[50%] -translate-x-[50%] lg:text-md sm:text-xl sm:bg-cyan/30 backdrop-blur-lg lg:bg-black sm:w-full py-4">
-      {links.map((link, index) => {
+    <ul className="flex items-center gap-1 md:gap-6 text-sm font-medium text-lightGrey">
+      {links.map((item, index) => {
         return (
-          <li key={index} className="group">
+          <li key={index} className="relative group">
             <Link
               spy={true}
               smooth={true}
               duration={500}
-              offset={-130}
-              to={link.section}
-              className="cursor-pointer text-white hover:text-cyan transition-all duration-500"
+              offset={-100}
+              to={item.section}
+              activeClass="!text-cyan font-bold"
+              className="cursor-pointer px-3 py-1.5 rounded-full hover:text-white transition-colors duration-200 block text-xs md:text-sm font-medium"
             >
-              {link.link}
+              {item.link}
             </Link>
-            <div className="mx-auto bg-cyan w-0 group-hover:w-full h-[1px] transition-all duration-500"></div>
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-cyan rounded-full group-hover:w-1/2 transition-all duration-300 pointer-events-none" />
           </li>
         );
       })}

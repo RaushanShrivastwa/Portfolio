@@ -4,5 +4,102 @@
 @tailwind utilities;
 
 body {
-  @apply bg-darkBrown;
+  @apply bg-darkBrown text-white overflow-x-hidden transition-colors duration-500;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
+/* Theme Switcher Overrides */
+html.theme-night body {
+  background-color: #030712 !important;
+}
+
+html.theme-night .glass-panel {
+  background: rgba(15, 23, 42, 0.65) !important;
+  border-color: rgba(168, 85, 247, 0.2) !important;
+}
+
+html.theme-light body {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+html.theme-light .glass-panel {
+  background: rgba(30, 41, 59, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08070d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c1830;
+  border-radius: 4px;
+  border: 2px solid #08070d;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f2fe;
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: rgba(22, 18, 36, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-glow {
+  background: rgba(22, 18, 36, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 242, 254, 0.05);
+}
+
+/* Moving radial gradient spots */
+.glow-spot {
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: 0.35;
+  transition: all 1s ease-in-out;
+}
+
+/* Hide default cursor on desktop when using Custom Cursor */
+@media (min-width: 1024px) {
+  .custom-cursor-active,
+  .custom-cursor-active a,
+  .custom-cursor-active button,
+  .custom-cursor-active input,
+  .custom-cursor-active textarea,
+  .custom-cursor-active [role="button"] {
+    cursor: none !important;
+  }
+}
+
+/* Parallax floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float 4s ease-in-out infinite;
+}
+

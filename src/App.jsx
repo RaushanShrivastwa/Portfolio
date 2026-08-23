@@ -9,11 +9,16 @@ import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
 import SubHeroMain from "./components/subHeroSection/SubHeroMain";
-import CertificateMain from "./components/certificates/CertificateMain"
+import CertificateMain from "./components/certificates/CertificateMain";
+import InteractiveBackground from "./components/InteractiveBackground";
+import CustomCursor from "./components/CustomCursor";
+import TerminalWidget from "./components/TerminalWidget";
 
 function App() {
   return (
-    <main className="font-body text-white relative overflow-hidden">
+    <main className="font-body text-white relative overflow-hidden min-h-screen selection:bg-cyan selection:text-black">
+      <CustomCursor />
+      <InteractiveBackground />
       <NavbarMain />
       <HeroMain />
       <HeroGradient />
@@ -26,8 +31,10 @@ function App() {
       <ExperienceMain />      
       <ContactMeMain />
       <FooterMain />
+      <TerminalWidget />
     </main>
   );
 }
 
 export default App;
+

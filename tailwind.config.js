@@ -10,35 +10,22 @@ export default {
       "2xl": "1536px",
     },
     colors: {
-      /* brown: "#53423e",
-      lightBrown: "#645550",
-      darkBrown: "#2d2421",
-      black: "#1e1917",
-      white: "#f1e1d9",
-      cyan: "#5fcfdd",
-      lightCyan: "#88e5f0",
-      darkCyan: "#009fb3",
-      orange: "#f0a94f",
-      lightOrange: "#fac27b",
-      darkOrange: "#d28422",
-      grey: "#626965",
-      lightGrey: "#8a938e",
-      darkGrey: "#3f4441",
-       */
-      brown: "#53423e",
-      lightBrown: "#645550",
-      darkBrown: "#2c2523",
-      black: "#1e1917",
-      white: "#f1e1d9",
-      cyan: "#15d1e9",
-      lightCyan: "#88e5f0",
-      darkCyan: "#009fb3",
-      orange: "#fb9718",
-      lightOrange: "#fac27b",
-      darkOrange: "#d28422",
-      grey: "#626965",
-      lightGrey: "#978580",
-      darkGrey: "#3f4441",
+      brown: "#161224", // Premium dark card background
+      lightBrown: "#221c38", // Lighter card background
+      darkBrown: "#08070d", // Dark obsidian page background
+      black: "#040306", // Midnight black
+      white: "#f5f4f7", // Pristine off-white
+      cyan: "#00f2fe", // Neon electric cyan
+      lightCyan: "#4facfe", // Neon blue/cyan gradient mix
+      darkCyan: "#09b3c4", // Deeper cyan
+      orange: "#ff5a36", // Sunset electric orange
+      lightOrange: "#ffaa85", // Soft warm orange
+      darkOrange: "#e03e1b", // Deep orange
+      grey: "#8c899c", // Slate grey
+      lightGrey: "#b8b5c6", // Light slate
+      darkGrey: "#120f1a", // Deep card borders
+      purple: "#7f00ff", // Neon purple
+      darkPurple: "#120f26", // Deep purple card bg
     },
     extend: {
       boxShadow: {

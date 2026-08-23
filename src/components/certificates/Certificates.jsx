@@ -1,48 +1,57 @@
-// src/data/certificates.js
 export const certificatesData = [
   {
     id: 1,
-    title: "Foundation: Data, Data, Everywhere",
-    issuer: "Google",
-    date: "", // You can add the date here
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
-    description: "Gained a foundational understanding of data analytics and the role of a data analyst.",
-    link: "#" // Add your certificate link here
+    title: "Oracle Cloud Infrastructure Certified Foundation Associate",
+    issuer: "Oracle",
+    date: "Verified",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
+    description: "Certified in core cloud concepts, OCI architecture, security, networking, and cloud infrastructure management.",
+    link: "#"
   },
   {
     id: 2,
-    title: "Career Essentials in Generative AI",
-    issuer: "Microsoft",
-    date: "", // You can add the date here
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
-    description: "Learned the core concepts of Artificial Intelligence and Generative AI.",
-    link: "#" // Add your certificate link here
+    title: "Foundation: Data, Data, Everywhere",
+    issuer: "Google",
+    date: "Verified",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+    description: "Gained a comprehensive foundational understanding of data analytics, data lifecycle, and data-driven decision making.",
+    link: "#"
   },
   {
     id: 3,
-    title: "Career Essentials in Software Development",
+    title: "Career Essentials in Generative AI",
     issuer: "Microsoft",
-    date: "",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
-    description: "Mastered essential concepts for modern software development.",
-    link: "#" // Add your certificate link here
+    date: "Verified",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+    description: "Mastered core concepts of Artificial Intelligence, Generative AI models, prompt engineering, and ethical AI deployment.",
+    link: "#"
   },
   {
     id: 4,
-    title: "Java Programming: Solving Problems with Software",
-    issuer: "Duke University",
-    date: "",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    description: "Acquired foundational skills in Java programming and object-oriented programming.",
-    link: "#" // Add your certificate link here
+    title: "LeetCode 250+ Problems Solved",
+    issuer: "LeetCode",
+    date: "Active CP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leetcode/leetcode-original.svg",
+    description: "Solved 250+ algorithmic problems across Data Structures, Dynamic Programming, Graphs, and Advanced Algorithms.",
+    link: "https://leetcode.com/u/raushan7219/"
   },
   {
     id: 5,
-    title: "MATLAB Onramp",
-    issuer: "MathWorks",
-    date: "",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png",
-    description: "Completed a self-paced introductory course on MATLAB.",
-    link: "#" // Add your certificate link here
+    title: "CodeChef 350+ Problems Solved",
+    issuer: "CodeChef",
+    date: "Active CP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codechef/codechef-original.svg",
+    description: "Demonstrated strong competitive programming capability with 350+ problems solved in timed contests.",
+    link: "https://www.codechef.com/users/raushan2709"
+  },
+  {
+    id: 6,
+    title: "GeeksforGeeks 100+ Problems Solved",
+    issuer: "GeeksforGeeks",
+    date: "Active CP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/geeksforgeeks/geeksforgeeks-original.svg",
+    description: "Solved 100+ core computer science problems covering OS, DBMS, Computer Networks, and C++ OOPs.",
+    link: "https://www.geeksforgeeks.org/profile/raushan2709"
   }
 ];
+
