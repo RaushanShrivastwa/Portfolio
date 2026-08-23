@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import NavbarLogo from "./NavbarLogo";
 import NavbarLinks from "./NavbarLinks";
 import NavbarBtn from "./NavbarBtn";
-import { FaBars, FaTimes, FaMoon, FaSun, FaMagic } from "react-icons/fa";
+import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 
 const NavbarMain = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [theme, setTheme] = useState("dark"); // 'dark' | 'night' | 'light'
+  const [theme, setTheme] = useState("dark"); // 'dark' | 'light'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,19 +23,19 @@ const NavbarMain = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
-    setTheme(savedTheme);
-    document.documentElement.className = `theme-${savedTheme}`;
+    // Migration fallback: if savedTheme was 'night', default to 'dark'
+    const validTheme = savedTheme === "light" ? "light" : "dark";
+    setTheme(validTheme);
+    document.documentElement.classList.remove("theme-dark", "theme-night", "theme-light");
+    document.documentElement.classList.add(`theme-${validTheme}`);
   }, []);
 
   const toggleTheme = () => {
-    let nextTheme = "dark";
-    if (theme === "dark") nextTheme = "night";
-    else if (theme === "night") nextTheme = "light";
-    else nextTheme = "dark";
-
+    const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
     localStorage.setItem("portfolio-theme", nextTheme);
-    document.documentElement.className = `theme-${nextTheme}`;
+    document.documentElement.classList.remove("theme-dark", "theme-night", "theme-light");
+    document.documentElement.classList.add(`theme-${nextTheme}`);
   };
 
   return (
@@ -60,11 +60,20 @@ const NavbarMain = () => {
           <button
             onClick={toggleTheme}
             title={`Current Theme: ${theme.toUpperCase()} (Click to switch)`}
-            className="p-2.5 rounded-full bg-white/5 border border-white/10 text-cyan hover:text-white hover:border-cyan/40 hover:bg-cyan/10 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer flex items-center justify-center"
+            aria-label="Toggle Theme"
+            className="px-3 py-2 rounded-full bg-white/5 border border-white/10 text-cyan hover:text-white hover:border-cyan/40 hover:bg-cyan/10 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer flex items-center gap-1.5 text-xs font-bold"
           >
-            {theme === "dark" && <FaMoon className="text-cyan text-sm" />}
-            {theme === "night" && <FaMagic className="text-purple text-sm animate-pulse" />}
-            {theme === "light" && <FaSun className="text-yellow-400 text-sm" />}
+            {theme === "dark" ? (
+              <>
+                <FaMoon className="text-cyan text-xs" />
+                <span className="hidden sm:inline">Dark</span>
+              </>
+            ) : (
+              <>
+                <FaSun className="text-amber-500 text-xs" />
+                <span className="hidden sm:inline text-amber-500">Light</span>
+              </>
+            )}
           </button>
 
           <NavbarBtn />

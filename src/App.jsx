@@ -16,7 +16,7 @@ import TerminalWidget from "./components/TerminalWidget";
 
 function App() {
   return (
-    <main className="font-body text-white relative overflow-hidden min-h-screen selection:bg-cyan selection:text-black">
+    <main className="font-body relative overflow-hidden min-h-screen selection:bg-cyan selection:text-black">
       <CustomCursor />
       <InteractiveBackground />
       <NavbarMain />
